@@ -3,14 +3,23 @@ include ./components/input/input
 include ./components/checkbox-button/checkbox-button
 include ./components/radio-button/radio-button
 include ./components/toggle/toggle
+include ./components/like-button/like-button
+include ./components/rate-button/rate-button
 doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
         title FSD-frontend-education-program-2nd-task
         link(rel="stylesheet" type="text/css" href="main.css")
+        link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
     .wrapper
+        +rate-button({count: "4"})
+        +rate-button({count: "1"})
+        +rate-button({count: "2"})
+        +rate-button({count: "5"})
+        +like-button({count: "2"})
+        +like-button({count: "12", isActive: true})
         +toggle({text: "Получать спецпредложения"})
         +radio-button({name: "sex", radioOptions: ["Мужчина", "Женщина"]})
         +checkbox-button({text: "Можно курить"})

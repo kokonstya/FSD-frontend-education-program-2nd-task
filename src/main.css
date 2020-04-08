@@ -3,6 +3,8 @@
 @import "./components/checkbox-button/checkbox-button.css";
 @import "./components/radio-button/radio-button.css";
 @import "./components/toggle/toggle.css";
+@import "./components/like-button/like-button.css";
+@import "./components/rate-button/rate-button.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;

@@ -1,0 +1,22 @@
+.radio-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+
+}
+.rate-button {
+    outline: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    position: relative;
+    /*background: #FFFFFF;*/
+    background: #FFFFFF;
+}
+
+.rate-button:hover {
+    background-image: url("../../../grade-24px.svg");
+}
