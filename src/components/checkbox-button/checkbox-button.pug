@@ -1,0 +1,8 @@
+mixin checkbox-button(options)
+    -
+        var checkboxButtonClassName = "checkbox-button"
+    label(class = checkboxButtonClassName)
+        input(type = "checkbox")
+        .container
+            span(class = "checkmark")
+        p= options.text

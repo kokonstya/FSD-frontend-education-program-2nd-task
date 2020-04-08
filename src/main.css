@@ -1,4 +1,7 @@
 @import "./components/button/button.css";
+@import "./components/input/input.css";
+@import "./components/checkbox-button/checkbox-button.css";
+@import "./components/radio-button/radio-button.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -12,4 +15,8 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: column
+}
+.hidden {
+    display: none;
 }
