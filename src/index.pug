@@ -10,7 +10,7 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="main.css")
     body
     .wrapper
-        +radio-button({name: "sex", text: "Можно курить"})
+        +radio-button({name: "sex", radioOptions: ["Мужчина", "Женщина"]})
         +checkbox-button({text: "Можно курить"})
         +checkbox-button({text: "Можно с питомцами"})
         +checkbox-button({text: "Можно пригласить гостей (до 10 человек)"})

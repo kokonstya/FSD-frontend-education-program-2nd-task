@@ -1,7 +1,13 @@
+.radio-button-wrapper {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .radio-button {
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 100px;
     padding: 0;
     font-style: normal;
     font-weight: normal;
@@ -9,5 +15,56 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+}
+.radio-button p {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+.radio-button input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.radio-button:hover input ~ .radio-button-container .radio-button-checkmark {
+    border-color: #BC9CFF;
+}
+.radio-button input:checked ~ .radio-button-container .radio-button-checkmark {
+    border-color: #BC9CFF;
+}
+.radio-button-checkmark {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.radio-button-container .radio-button-checkmark:after {
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 10px;
+}
+
+.radio-button-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-button input:checked ~ .radio-button-container .radio-button-checkmark:after {
+    display: block;
+}
+
+.radio-button-container {
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: relative;
 }

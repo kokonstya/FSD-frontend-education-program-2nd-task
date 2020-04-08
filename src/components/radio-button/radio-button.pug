@@ -1,8 +1,9 @@
 mixin radio-button(options)
-    -
-        var radioButtonClassName = "radio-button"
-    label(class = radioButtonClassName)
-        input(type = "radio")
-        .container
-            span(class = "checkmark")
-        p= options.text
+    - var radioButtonClassName = "radio-button"
+    .radio-button-wrapper
+        - for (var x = 0; x < options.radioOptions.length; x++)
+            label(class = radioButtonClassName)
+                input(type = "radio", name = options.name)
+                .radio-button-container
+                    span(class = "radio-button-checkmark")
+                p= options.radioOptions[x]

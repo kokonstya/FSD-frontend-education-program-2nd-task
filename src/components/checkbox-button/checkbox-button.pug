@@ -3,6 +3,6 @@ mixin checkbox-button(options)
         var checkboxButtonClassName = "checkbox-button"
     label(class = checkboxButtonClassName)
         input(type = "checkbox")
-        .container
-            span(class = "checkmark")
+        .checkbox-button-container
+            span(class = "checkbox-button-checkmark")
         p= options.text
