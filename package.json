@@ -1,0 +1,22 @@
+{
+  "name": "FSD-2nd-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.pug",
+    "build": "parcel build src/index.pug -d docs --public-url ./"
+  },
+  "keywords": ["figma", "Parcel"],
+  "author": "kokonstya",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "pug": "^2.0.4",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "components": "^0.1.0"
+  }
+}
