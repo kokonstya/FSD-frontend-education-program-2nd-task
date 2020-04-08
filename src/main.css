@@ -2,6 +2,7 @@
 @import "./components/input/input.css";
 @import "./components/checkbox-button/checkbox-button.css";
 @import "./components/radio-button/radio-button.css";
+@import "./components/toggle/toggle.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;

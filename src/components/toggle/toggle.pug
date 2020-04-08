@@ -1,0 +1,8 @@
+mixin toggle(options)
+    -
+        var toggleClassName = "toggle"
+    label(class = toggleClassName)
+        input(type = "checkbox")
+        .toggle-container
+            span(class = "toggle-checkmark")
+        p= options.text

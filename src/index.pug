@@ -2,6 +2,7 @@ include ./components/button/button
 include ./components/input/input
 include ./components/checkbox-button/checkbox-button
 include ./components/radio-button/radio-button
+include ./components/toggle/toggle
 doctype html
 html(lang="en")
     head
@@ -10,6 +11,7 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="main.css")
     body
     .wrapper
+        +toggle({text: "Получать спецпредложения"})
         +radio-button({name: "sex", radioOptions: ["Мужчина", "Женщина"]})
         +checkbox-button({text: "Можно курить"})
         +checkbox-button({text: "Можно с питомцами"})

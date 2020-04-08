@@ -1,0 +1,62 @@
+.toggle {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.5);
+    text-transform: none;
+    border: 1px solid black;
+
+}
+.toggle p {
+    margin: 0;
+    margin-left: 10px;
+}
+.toggle input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.toggle input:checked ~ .toggle-container .toggle-checkmark {
+    border-color: #BC9CFF;
+}
+.toggle-checkmark {
+    display: block;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.toggle input:checked ~ .toggle-container .toggle-checkmark:after {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    left: 24px;
+ }
+.toggle-container .toggle-checkmark:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    transition: left 0.3s ease-in;
+}
+
+.toggle input:checked ~ .toggle-container .toggle-checkmark:after {
+    display: block;
+}
+
+.toggle-container {
+    display: block;
+    width: 40px;
+    height: 20px;
+    top: 2px;
+    position: relative;
+}
