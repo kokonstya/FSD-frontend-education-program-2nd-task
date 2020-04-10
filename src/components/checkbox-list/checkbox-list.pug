@@ -1,0 +1,13 @@
+include ./../../components/checkbox-button/checkbox-button
+
+mixin checkbox-list(options)
+    - var checkboxListClassName = "checkbox-list"
+    .checkbox-list-wrapper
+        label(for = "checkbox-list__expanded")
+            input(type = "checkbox" id = "checkbox-list__expanded")
+            div(class="checkbox-list__label" )
+                p= "expandable checkbox list"
+        .checkbox-list__list
+            - for (var x = 0; x < options.items.length; x++)
+                //.checkbox-list__item
+                +checkbox-button({text: options.items[x]})

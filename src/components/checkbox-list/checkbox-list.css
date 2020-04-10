@@ -1,4 +1,4 @@
-.dropdown-wrapper {
+.checkbox-list-wrapper {
     display: flex;
     flex-direction: column;
     width: 266px;
@@ -6,21 +6,19 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height */
     color: rgba(31, 32, 65, 0.75);
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    border-radius: 2px;
 
 }
-.dropdown__label {
+.checkbox-list__label {
     position: relative;
     padding: 14px;
-    font-weight: normal;
+    font-weight: bold;
     min-height: 44px;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.5);
     cursor: pointer;
+    text-transform: uppercase;
+    color: #1F2041;
 }
-.dropdown__label:after {
+.checkbox-list__label:after {
     content: '';
     transition: all .25s ease;
     position: absolute;
@@ -30,33 +28,31 @@
     width: 24px;
     height: 24px;
 }
-#dropdown__expanded {
+#checkbox-list__expanded {
     display: none;
 }
-#dropdown__expanded:checked ~ .dropdown__label:after {
+#checkbox-list__expanded:checked ~ .checkbox-list__label:after {
     transform: rotate(180deg);
 }
-.dropdown__list {
+.checkbox-list__list {
     text-transform: uppercase;
     color: #1F2041;
     display: flex;
     flex-direction: column;
 }
-.dropdown__item {
+.checkbox-list__list .checkbox-button {
     cursor: pointer;
-    justify-content: space-between;
     padding-right: 7px;
     padding-left: 15px;
     align-items: center;
-    min-height: 44px;
-    display: flex;
+    min-height: 30px;
 }
-.dropdown__item:hover {
+.checkbox-list__item:hover {
     background: #cccccc;
 }
-.dropdown__list {
+.checkbox-list__list {
     display: none;
 }
-.dropdown__list.active {
+.checkbox-list__list.active {
     display: flex;
 }

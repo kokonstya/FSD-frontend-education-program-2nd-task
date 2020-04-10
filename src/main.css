@@ -10,6 +10,8 @@
 @import "./components/counter/counter.css";
 @import "./components/header/header.css";
 @import "./components/footer/footer.css";
+@import "./components/checkbox-list/checkbox-list.css";
+
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;

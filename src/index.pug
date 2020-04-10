@@ -10,6 +10,7 @@ include components/select-js/select-js
 include components/counter/counter
 include components/header/header
 include components/footer/footer
+include components/checkbox-list/checkbox-list
 doctype html
 html(lang="en")
     head
@@ -19,6 +20,7 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
     .wrapper
+        +checkbox-list({items: ["Спальни", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты"]})
         +dropdown({items: ["Спальни", "Кухни", "Ванные комнаты"]})
         +btn({title: "Перейти к оплате", isSubmit: true, isFilled: true})
         +footer({nav: ["navigation", "About us", "News", "Support", "Products"],
