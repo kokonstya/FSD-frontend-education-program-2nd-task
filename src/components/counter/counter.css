@@ -1,7 +1,6 @@
 .counter {
     width: 92px;
     display: flex;
-    border: 1px solid black;
 
 }
 .counter-wrapper {
@@ -18,6 +17,7 @@
     margin: 5px;
 }
 .counter-wrapper button {
+    cursor: pointer;
     width: 30px;
     height: 30px;
     font-style: normal;

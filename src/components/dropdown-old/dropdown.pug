@@ -1,0 +1,17 @@
+mixin dropdown(options)
+    - var dropdownClassName = "dropdown"
+    .dropdown-wrapper
+        label( for="dropdown-select" class="dropdown-select")
+            input( class="dropdown-label" type="radio" name=options.name value="not_changed" id="dropdown-bg" checked)
+            input( class="dropdown-label" type="radio" name=options.name value="not_changed" id="dropdown-select")
+            label( class="dropdown-bg dropdown-label" for="dropdown-bg")
+            div( class="dropdown-items")
+                - for (var x = 0; x < options.select.length; x++)
+                    input( type="radio" name=options.name value=options.select[x] id=x)
+                    label( for=x class="dropdown-select-label")
+                        p= options.select[x]
+                        .dropdown-count
+                            button(class="minus")= "-"
+                            span= "2"
+                            button(class="plus")= "+"
+                span( id="dropdown-text")= options.placeholder
