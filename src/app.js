@@ -1,1 +1,1 @@
-import './main.css'
+import './components/select-js/select-js'

@@ -6,6 +6,7 @@
 @import "./components/like-button/like-button.css";
 @import "./components/rate-button/rate-button.css";
 @import "./components/dropdown/dropdown.css";
+@import "./components/select-js/select-js.scss";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;
