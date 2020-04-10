@@ -5,6 +5,7 @@
 @import "./components/toggle/toggle.css";
 @import "./components/like-button/like-button.css";
 @import "./components/rate-button/rate-button.css";
+@import "./components/dropdown/dropdown.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;

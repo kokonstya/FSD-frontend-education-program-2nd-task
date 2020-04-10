@@ -5,6 +5,7 @@ include ./components/radio-button/radio-button
 include ./components/toggle/toggle
 include ./components/like-button/like-button
 include ./components/rate-button/rate-button
+include ./components/dropdown/dropdown
 doctype html
 html(lang="en")
     head
@@ -14,6 +15,7 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
     .wrapper
+        +dropdown({name: "list", select: ["Спальни", "Кровати", "Ванные комнаты"], placeholder: "2 спальни, 2 кровати.."})
         +rate-button({count: "4"})
         +rate-button({count: "1"})
         +rate-button({count: "2"})
