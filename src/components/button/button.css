@@ -1,3 +1,11 @@
+.button-wrapper {
+    position: relative;
+}
+.button-wrapper-submit {
+    width: 320px;
+    position: relative;
+
+}
 .button {
     height: 44px;
     outline: none;
@@ -48,4 +56,16 @@
 .button-filled:hover {
     opacity: 0.5;
     color: #fff;
+}
+.button-submit {
+    width: 320px;
+}
+.button-submit:after {
+    content: '';
+    position: absolute;
+    background-image: url("./../../../arrow_forward-white.svg");
+    right: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
 }

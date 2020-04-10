@@ -1,7 +1,10 @@
 mixin btn(options)
     -
         var buttonClassName = "button"
+        var buttonWrapperClassName = "button-wrapper"
         buttonClassName += options.isFilled ? " button-filled" : ""
         buttonClassName += options.isBordered ? " button-bordered" : ""
-    div(class = "button-wrapper" style={position:'relative'})
+        buttonClassName += options.isSubmit ? " button-submit" : ""
+        buttonWrapperClassName += options.isSubmit ? "-submit" : ""
+    div(class = buttonWrapperClassName)
         button(class = buttonClassName)= options.title || "click me"

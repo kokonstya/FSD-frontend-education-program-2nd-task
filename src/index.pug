@@ -19,6 +19,7 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
     .wrapper
+        +btn({title: "Перейти к оплате", isSubmit: true, isFilled: true})
         +footer({nav: ["navigation", "About us", "News", "Support", "Products"],
             about: ["about us", "Who we are", "Our team", "Careers", "Investors"],
             support: ["support", "Documentation", "Community", "Get in touch"],
