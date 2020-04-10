@@ -1,0 +1,9 @@
+mixin counter(options)
+    - var counterClassName = "counter"
+    div( class = counterClassName)
+        .counter-wrapper
+            button( class = counterClassName + "-minus")= "-"
+            //input( type = "text" class = counterClassName + "-current" placeholder = "0")
+            div( class = counterClassName + "-current")= "0"
+            button( class = counterClassName + "-plus")= "+"
+

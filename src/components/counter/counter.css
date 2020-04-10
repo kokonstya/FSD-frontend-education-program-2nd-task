@@ -1,0 +1,36 @@
+.counter {
+    width: 92px;
+    display: flex;
+    border: 1px solid black;
+
+}
+.counter-wrapper {
+    display: flex;
+    align-items: center;
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+
+}
+.counter-current {
+    display: block;
+    border: none;
+    width: auto;
+    margin: 5px;
+}
+.counter-wrapper button {
+    width: 30px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background: #FFFFFF;
+    color: rgba(31, 32, 65, 0.25);
+    border-radius: 15px;
+    outline: none;
+}
+.counter-wrapper button:hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.5);
+}

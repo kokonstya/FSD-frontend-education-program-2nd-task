@@ -3,5 +3,5 @@ mixin btn(options)
         var buttonClassName = "button"
         buttonClassName += options.isFilled ? " button-filled" : ""
         buttonClassName += options.isBordered ? " button-bordered" : ""
-    div(style={position:'relative'})
+    div(class = "button-wrapper" style={position:'relative'})
         button(class = buttonClassName)= options.title || "click me"

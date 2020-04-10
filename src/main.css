@@ -7,6 +7,8 @@
 @import "./components/rate-button/rate-button.css";
 @import "./components/dropdown/dropdown.css";
 @import "./components/select-js/select-js.scss";
+@import "./components/counter/counter.css";
+@import "./components/header/header.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;

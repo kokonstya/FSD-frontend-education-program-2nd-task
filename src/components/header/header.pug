@@ -1,0 +1,18 @@
+include ./../../components/button/button
+mixin header(options)
+    - var headerClassName = "header"
+    .header-wrapper
+        .header
+            .header-logo
+                img( src = "./../logo.svg")
+            .header-navigation
+                nav( class = "header-nav")
+                    ul( class = "nav-list")
+                        - for (var x = 0; x < options.nav.length; x++)
+                            li( class = "nav-item")= options.nav[x]
+                if !options.isLogined
+                    .login
+                        +btn({title: "login", isBordered: true})
+                        +btn({title: "register", isFilled: true})
+                else
+                    .logout= "Cosmin Negoita"

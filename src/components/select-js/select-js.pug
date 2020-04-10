@@ -1,6 +1,8 @@
+include ./../../components/counter/counter
 mixin select-js(options)
     - var dropdownClassName = "dropdown"
     .select-wrap
         select.select(name="select")
             - for (var x = 0; x < options.selectors.length; x++)
              option(value=options.selectors[x].value)= options.selectors[x].select
+                +counter

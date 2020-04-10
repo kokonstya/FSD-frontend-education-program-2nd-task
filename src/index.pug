@@ -7,6 +7,8 @@ include ./components/like-button/like-button
 include ./components/rate-button/rate-button
 include ./components/dropdown/dropdown
 include components/select-js/select-js
+include components/counter/counter
+include components/header/header
 doctype html
 html(lang="en")
     head
@@ -16,6 +18,9 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
     .wrapper
+        +header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
+        +header({isLogined: true, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
+        +counter({})
         +select-js({selectors: [{value: "1", select: "Спальни"}, {value: "2", select: "Кухни"}, {value: "3", select: "Ванные комнаты"}]})
         +rate-button({count: "4"})
         +rate-button({count: "1"})
