@@ -55,7 +55,7 @@
     margin: 0px;
     display: block;
 }
-input
+.dropdown-items input
 {
     display: none;
 }

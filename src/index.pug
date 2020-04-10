@@ -9,6 +9,7 @@ include ./components/dropdown/dropdown
 include components/select-js/select-js
 include components/counter/counter
 include components/header/header
+include components/footer/footer
 doctype html
 html(lang="en")
     head
@@ -18,6 +19,11 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
     .wrapper
+        +footer({nav: ["navigation", "About us", "News", "Support", "Products"],
+            about: ["about us", "Who we are", "Our team", "Careers", "Investors"],
+            support: ["support", "Documentation", "Community", "Get in touch"],
+            subscribe: {title: "subscribe to our newsletter", text: "Receive our latest news and promotions in your inbox!"},
+            text: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."})
         +header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
         +header({isLogined: true, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
         +counter({})

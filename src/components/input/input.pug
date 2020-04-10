@@ -4,11 +4,5 @@ mixin input(options)
         inputClassName += " input-" + options.type
 
     div(class = "input-label")
-        if options.type === "select"
-            label(for = options.id, class = "label")= options.label
-            select(type = options.type, id = options.id, class = inputClassName, placeholder = options.placeholder)
-                - for (var x = 0; x < options.selectedOptions.length; x++)
-                    option(class="option" value=options.selectedOptions[x])= options.selectedOptions[x]
-        else
-            label(for = options.id, class = "label")= options.label
-            input(type = options.type, id = options.id, class = inputClassName, placeholder = options.placeholder)
+        label(for = options.id, class = "label")= options.label
+        input(type = options.type, id = options.id, class = inputClassName, placeholder = options.placeholder)
