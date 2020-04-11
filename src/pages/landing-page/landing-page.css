@@ -1,0 +1,28 @@
+.landing-page-wrapper {
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+.landing-page {
+    width: 1440px;
+    background-image: url("./../../../background.jpg");
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.landing-page .form-search-wrapper {
+    position: absolute;
+    left: 187px;
+    top: 50px;
+}
+.landing-page span {
+    display: block;
+    width: 300px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    position: absolute;
+    right: 120px;
+    bottom: 30px;
+}

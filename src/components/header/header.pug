@@ -12,7 +12,7 @@ mixin header(options)
                             li( class = "nav-item")= options.nav[x]
                 if !options.isLogined
                     .login
-                        +btn({title: "login", isBordered: true})
-                        +btn({title: "register", isFilled: true})
+                        +btn({title: "Войти", isBordered: true})
+                        +btn({title: "Зарегистрироваться", isFilled: true})
                 else
                     .logout= "Cosmin Negoita"

@@ -1,0 +1,15 @@
+include ./../../components/form-search/form-search
+include ./../../components/header/header
+include ./../../components/footer/footer
+
+mixin landing-page(options)
+    .landing-page-wrapper
+        +header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
+        .landing-page
+            +form-search({title: "Найдём номера под ваши пожелания"})
+            span= "Лучшие номера для вашей работы, отдыха и просто вдохновения"
+        +footer({nav: ["navigation", "About us", "News", "Support", "Products"],
+            about: ["about us", "Who we are", "Our team", "Careers", "Investors"],
+            support: ["support", "Documentation", "Community", "Get in touch"],
+            subscribe: {title: "subscribe to our newsletter", text: "Receive our latest news and promotions in your inbox!"},
+            text: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."})
