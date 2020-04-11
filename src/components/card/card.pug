@@ -1,0 +1,19 @@
+include ./../../components/rate-button/rate-button
+mixin card(options)
+    - var cardClassName = "card"; var rate = options.rate
+    .card-wrapper
+        .card
+            .card__image
+                img(src = options.imgSrc)
+                .card__slider
+            .card__description
+                .card__info
+                    b(class = "card__number")= "№ " + options.number
+                        if options.isLux
+                        span(class = "card__lux")= "ЛЮКС"
+                    b(class = "card__price")= options.price + " P"
+                        span(class = "card__price-span")= "в сутки"
+                .card__rating
+                    +rate-button({count: rate})
+                    b(class = "card__reviews")= options.reviews
+                        span(class = "card__reviews-span")= "Отзывов"

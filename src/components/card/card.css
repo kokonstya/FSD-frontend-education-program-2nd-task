@@ -1,0 +1,61 @@
+.card-wrapper {
+    border: 1px solid black;
+    width: 270px;
+    box-sizing: content-box;
+
+}
+
+.card {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 257px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+}
+.card__image img {
+    width: 270px;
+}
+.card__description {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.card__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    padding-bottom: 10px;
+}
+.card__rating {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.card__number {
+    color: #1F2041;
+}
+.card__lux {
+    font-size: 12px;
+    line-height: 15px;
+    color: #BC9CFF;
+    text-transform: uppercase;
+    margin-left: 5px;
+
+}
+.card__price-span {
+    font-weight: normal;
+    margin-left: 5px;
+}
+.card__reviews-span {
+    font-weight: normal;
+    margin-left: 5px;
+
+}

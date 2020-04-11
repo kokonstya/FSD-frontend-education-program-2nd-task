@@ -11,6 +11,7 @@
 @import "./components/header/header.css";
 @import "./components/footer/footer.css";
 @import "./components/checkbox-list/checkbox-list.css";
+@import "./components/card/card.css";
 /*---------------------*/
 @import "./components/form-search/form-search.css";
 @import "./components/form-registration/form-registration.css";
