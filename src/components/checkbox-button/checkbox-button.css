@@ -9,42 +9,40 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
+    cursor: pointer;
 }
-.checkbox-button p {
-    margin: 0;
-    margin-left: 10px;
-    margin-top: 1px;
-}
-.checkbox-button input {
+
+.checkbox-button__input {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
 }
-.checkbox-button:hover input ~ .checkbox-button-container .checkbox-button-checkmark {
+.checkbox-button:hover > .checkbox-button__mark .checkbox-button__checkmark {
     border-color: #BC9CFF;
 }
-.checkbox-button input:checked ~ .checkbox-button-container .checkbox-button-checkmark {
+.checkbox-button__input:checked + .checkbox-button__mark .checkbox-button__checkmark {
     border-color: #BC9CFF;
 }
-.checkbox-button-checkmark {
+.checkbox-button__checkmark {
     display: block;
     height: 20px;
     width: 20px;
-    background-color: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
 }
-.checkbox-button-container .checkbox-button-checkmark:after {
+.checkbox-button__checkmark:after {
     left: 5px;
     top: 10px;
     width: 6px;
     height: 2px;
     background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
     transform: rotate(45deg);
+
 }
-.checkbox-button-container .checkbox-button-checkmark:before {
+.checkbox-button__checkmark:before {
+    z-index: 3;
     left: 8px;
     top: 9px;
     width: 8px;
@@ -52,20 +50,44 @@
     background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
     transform: rotate(-45deg);
 }
-.checkbox-button-checkmark:after, .checkbox-button-checkmark:before {
+.checkbox-button__checkmark:after, .checkbox-button__checkmark:before {
     content: "";
     position: absolute;
     display: none;
 }
 
-.checkbox-button input:checked ~ .checkbox-button-container .checkbox-button-checkmark:after,
-.checkbox-button input:checked ~ .checkbox-button-container .checkbox-button-checkmark:before {
+.checkbox-button__input:checked + .checkbox-button__mark .checkbox-button__checkmark:after,
+.checkbox-button__input:checked + .checkbox-button__mark .checkbox-button__checkmark:before {
     display: block;
 }
 
-.checkbox-button-container {
+.checkbox-button__mark {
     display: block;
     height: 20px;
     width: 20px;
     position: relative;
+}
+.checkbox-button__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-button__text {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+.checkbox-button__label {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.checkbox-button__label_no-rich {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: rgba(31, 32, 65, 0.5);
+
 }
