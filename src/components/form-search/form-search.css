@@ -1,0 +1,46 @@
+.form-search-wrapper {
+    width: 380px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 30px;
+
+}
+.form-search {
+    display: flex;
+    flex-direction: column;
+
+}
+.form-search__title {
+    display: block;
+    color: #1F2041;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.form-search__dates {
+     margin-bottom: 20px;
+ }
+.form-search__guests {
+    margin-bottom: 25px;
+}
+
+.form-search__guests .dropdown-wrapper {
+    width: 320px;
+}
+
+/*ss*/
+
+.form-search__dates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-search__dates .dropdown-wrapper {
+    width: 150px;
+}

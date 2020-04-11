@@ -3,12 +3,14 @@ include ./../../components/counter/counter
 mixin dropdown(options)
     - var dropdownClassName = "dropdown"
     .dropdown-wrapper
-        label(for = "dropdown__expanded")
-            input(type = "checkbox" id = "dropdown__expanded")
-            div(class="dropdown__label" )
-                p= "2 кухни, 2 спальни.."
-        .dropdown__list
-            - for (var x = 0; x < options.items.length; x++)
-                .dropdown__item
-                    p= options.items[x]
-                    +counter({})
+        b( class = "dropdown__title")= options.title
+        .dropdown
+            label(for = "dropdown__expanded")
+                input(type = "checkbox" id = "dropdown__expanded")
+                div(class="dropdown__label" )
+                    p= options.label
+            .dropdown__list
+                - for (var x = 0; x < options.items.length; x++)
+                    .dropdown__item
+                        p= options.items[x]
+                        +counter({})

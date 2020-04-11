@@ -11,7 +11,8 @@
 @import "./components/header/header.css";
 @import "./components/footer/footer.css";
 @import "./components/checkbox-list/checkbox-list.css";
-
+/*---------------------*/
+@import "./components/form-search/form-search.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;

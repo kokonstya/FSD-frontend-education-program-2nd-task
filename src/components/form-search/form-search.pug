@@ -1,0 +1,14 @@
+include ./../../components/button/button
+include ./../../components/dropdown/dropdown
+
+mixin form-search(options)
+    - var formSearchClassName = "form-search"
+    .form-search-wrapper
+        .form-search
+            p( class = "form-search__title")= options.title
+            .form-search__dates
+                +dropdown({title: "Прибытие", label: "Сколько гостей", items: ["Взрослые", "Дети", "Младенцы"]})
+                +dropdown({title: "Выезд", label: "Сколько гостей", items: ["Взрослые", "Дети", "Младенцы"]})
+            .form-search__guests
+                +dropdown({title: "Гости", label: "Сколько гостей", items: ["Взрослые", "Дети", "Младенцы"]})
+            +btn({title: "подобрать номера", isSubmit: true, isFilled: true})
