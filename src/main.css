@@ -14,6 +14,7 @@
 /*---------------------*/
 @import "./components/form-search/form-search.css";
 @import "./components/form-registration/form-registration.css";
+@import "./components/form-login/form-login.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;
