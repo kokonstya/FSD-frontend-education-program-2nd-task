@@ -5,7 +5,19 @@ mixin card(options)
         .card
             .card__image
                 img(src = options.imgSrc)
+                .card__button.next
+                    svg(xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24")
+                        path(fill="#FFFFFF" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z")
+                        path(d="M0 0h24v24H0z" fill="none")
+                .card__button.prev
+                    svg(xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24")
+                        path(fill="#FFFFFF" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z")
+                        path(d="M0 0h24v24H0z" fill="none")
                 .card__slider
+                    .slider__button.active
+                    .slider__button
+                    .slider__button
+                    .slider__button
             .card__description
                 .card__info
                     b(class = "card__number")= "№ " + options.number
