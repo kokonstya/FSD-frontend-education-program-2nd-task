@@ -1,0 +1,23 @@
+include ./../../components/button/button
+include ./../../components/input/input
+include ./../../components/radio-button/radio-button
+include ./../../components/dropdown/dropdown
+include ./../../components/toggle/toggle
+
+mixin form-registration(options)
+    - var formRegistrationClassName = "form-registration"
+    .form-registration-wrapper
+        .form-registration
+            p( class = "form-registration__title")= options.title
+            +input({type: "text", placeholder: "Имя"})
+            +input({type: "text", placeholder: "Фамилия"})
+            +radio-button({radioOptions: ["Мужчина", "Женщина"], name: "sex"})
+            +input({label: "Дата рождения", type: "text", placeholder: "ДД.ММ.ГГГГ"})
+            +input({label: "Данные для входа сервис", type: "text", placeholder: "Email"})
+            +input({type: "text", placeholder: "Пароль"})
+            +toggle({text: "Получать спецпредложения"})
+            +btn({title: "Перейти к оплате", isSubmit: true, isFilled: true})
+            .form-registration__login
+                p= "Уже есть аккаунт на Toxin"
+                +btn({title: "Войти", isBordered: true})
+

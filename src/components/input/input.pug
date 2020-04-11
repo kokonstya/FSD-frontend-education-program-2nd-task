@@ -4,5 +4,6 @@ mixin input(options)
         inputClassName += " input-" + options.type
 
     div(class = "input-label")
-        label(for = options.id, class = "label")= options.label
+        if options.label
+            label(for = options.id, class = "label")= options.label
         input(type = options.type, id = options.id, class = inputClassName, placeholder = options.placeholder)

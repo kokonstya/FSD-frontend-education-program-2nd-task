@@ -13,6 +13,7 @@ include components/footer/footer
 include components/checkbox-list/checkbox-list
     // ------------------------------------
 include components/form-search/form-search
+include components/form-registration/form-registration
 doctype html
 html(lang="en")
     head
@@ -22,7 +23,8 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
     .wrapper
-        +form-search({title: "Найдём номера под ваши пожелания"})
+        +form-registration({title: "Регистрация аккаунта"})
+        //+form-search({title: "Найдём номера под ваши пожелания"})
         //+checkbox-list({items: ["Спальни", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты"]})
         //+dropdown({title: "Dropdown", label: "2 кухни, 2 спальни..", items: ["Спальни", "Кухни", "Ванные комнаты"]})
         //+btn({title: "Перейти к оплате", isSubmit: true, isFilled: true})
@@ -31,7 +33,7 @@ html(lang="en")
         //    support: ["support", "Documentation", "Community", "Get in touch"],
         //    subscribe: {title: "subscribe to our newsletter", text: "Receive our latest news and promotions in your inbox!"},
         //    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."})
-        //+header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
+        +header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
         //+header({isLogined: true, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
         //+counter({})
         //+select-js({selectors: [{value: "1", select: "Спальни"}, {value: "2", select: "Кухни"}, {value: "3", select: "Ванные комнаты"}]})

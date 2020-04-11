@@ -1,8 +1,9 @@
 .radio-button-wrapper {
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .radio-button {
     display: flex;
