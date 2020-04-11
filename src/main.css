@@ -12,12 +12,14 @@
 @import "./components/footer/footer.css";
 @import "./components/checkbox-list/checkbox-list.css";
 @import "./components/card/card.css";
+@import "./components/range-slider/range-slider.css";
 /*---------------------*/
 @import "./components/form-search/form-search.css";
 @import "./components/form-registration/form-registration.css";
 @import "./components/form-login/form-login.css";
 /*---------------*/
 @import "./pages/landing-page/landing-page.css";
+@import "./pages/search-page/search-page.css";
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;

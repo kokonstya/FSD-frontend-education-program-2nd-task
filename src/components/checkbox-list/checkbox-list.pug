@@ -9,5 +9,4 @@ mixin checkbox-list(options)
                 p= "expandable checkbox list"
         .checkbox-list__list
             - for (var x = 0; x < options.items.length; x++)
-                //.checkbox-list__item
                 +checkbox-button({text: options.items[x]})

@@ -1,0 +1,20 @@
+include ./../../components/card/card
+include ./../../components/header/header
+include ./../../components/footer/footer
+include ./../../components/input/input
+include ./../../components/dropdown/dropdown
+
+mixin search-page(options)
+    .search-page-wrapper
+        +header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
+        .search-page
+            .search-page__filter
+                +input({type: "text", placeholder: "Email", label: "Даты пребывания в отеле"})
+                +dropdown({title: "Dropdown", label: "2 кухни, 2 спальни..", items: ["Спальни", "Кухни", "Ванные комнаты"]})
+                +checkbox-list({items: ["Спальни", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты"]})
+            .search-page__content
+                b(class = "search-page__title")= "123"
+                .search-page__list
+                    - for (var x = 0; x < 10; x++)
+                        .search-page__item
+                            +card({imgSrc: "./../card_image_1.jpg", number: "111", isLux:true, price: "9 990", rate: "3", reviews: "65"})

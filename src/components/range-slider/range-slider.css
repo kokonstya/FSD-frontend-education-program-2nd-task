@@ -1,0 +1,63 @@
+.range-slider {
+    width: 266px;
+    height: 50px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.range-slider__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.range-slider__range {
+    font-weight: normal;
+    color: rgba(31, 32, 65, 0.5);
+}
+.range-slider__body {
+    height: 20px;
+    position: relative;
+}
+.range-slider__button {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    z-index: 2;
+}
+.range-slider__button.from {
+    top: 4px;
+    left: 65px;
+}
+.range-slider__button.to {
+    top: 4px;
+    left: 150px;
+}
+.range-slider__current {
+    z-index: 1;
+    position: absolute;
+    width: 88px;
+    height: 6px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 3px;
+    top: 7px;
+    left: 70px;
+}
+.range-slider__value {
+    position: absolute;
+    top: 7px;
+    width: 266px;
+    height: 6px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
