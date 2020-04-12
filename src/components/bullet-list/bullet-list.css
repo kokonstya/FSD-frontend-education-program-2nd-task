@@ -1,0 +1,34 @@
+.bullet-list {
+    width: 292px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+
+}
+.bullet-list__label {
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+
+}
+.bullet-list__item {
+    position: relative;
+    padding: 5px 0px;
+}
+.bullet-list__item:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(31, 32, 65, 0.25);
+}
+.bullet-list__text {
+    display: block;
+    padding-left: 25px;
+}

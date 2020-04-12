@@ -13,6 +13,7 @@ include components/footer/footer
 include components/checkbox-list/checkbox-list
 include components/card/card
 include components/range-slider/range-slider
+include components/bullet-list/bullet-list
     // ------------------------------------
 include components/form-search/form-search
 include components/form-registration/form-registration
@@ -31,10 +32,11 @@ html(lang="en")
     body
 
     .wrapper
+        +bullet-list({label: "Широкий коридор", items: ["Моирокий коридирокий коридирокий кориджно с питомцами", "Без вечеринок и мероприятий", "Можно с питомцами"]})
         //+checkbox-button({isRich: true, label: "Широкий коридор", text: "Можно с питомцами"})
         //+checkbox-button({label: "Можно с питомцами"})
         //+range-slider({})
-        +search-page({})
+        //+search-page({})
         //+landing-page({})
         //+card({imgSrc: "./../card_image_1.jpg", number: "111", isLux:true, price: "9 990", rate: "3", reviews: "65"})
         //+form-login({title: "Войти"})

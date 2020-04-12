@@ -26,3 +26,8 @@ mixin search-page(options)
                     - for (var x = 0; x < 10; x++)
                         .search-page__item
                             +card({imgSrc: "./../card_image_1.jpg", number: "111", isLux:true, price: "9 990", rate: "3", reviews: "65"})
+        +footer({nav: ["navigation", "About us", "News", "Support", "Products"],
+            about: ["about us", "Who we are", "Our team", "Careers", "Investors"],
+            support: ["support", "Documentation", "Community", "Get in touch"],
+            subscribe: {title: "subscribe to our newsletter", text: "Receive our latest news and promotions in your inbox!"},
+            text: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."})

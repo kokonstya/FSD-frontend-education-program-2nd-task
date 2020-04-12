@@ -1,0 +1,8 @@
+mixin bullet-list(options)
+    - var bulletListClassName = "bullet-list"
+    .bullet-list
+        b(class = bulletListClassName + "__label")= options.label
+        .bullet-list__list
+            - for (var x = 0; x < options.items.length; x++)
+                .bullet-list__item
+                    p(class = bulletListClassName + "__text")= options.items[x]
