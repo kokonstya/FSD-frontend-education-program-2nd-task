@@ -1,0 +1,28 @@
+.filter__dates, .filter__guests, .filter__comforts {
+    width: 266px;
+}
+.filter__dates .dropdown__list,
+.filter__guests .dropdown__list,
+.filter__comforts .dropdown__list {
+    width: 266px;
+}
+.filter__options-list, .filter__accessibility-list {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+}
+.filter__dates {
+    margin-bottom: 22px;
+}
+.filter__guests {
+    margin-bottom: 30px;
+}
+.filter__price-range {
+    margin-bottom: 30px;
+}
+.filter__options-item {
+    margin: 10px;
+}

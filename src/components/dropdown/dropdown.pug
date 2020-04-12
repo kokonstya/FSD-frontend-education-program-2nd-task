@@ -2,7 +2,7 @@ include ./../../components/counter/counter
 
 mixin dropdown(options)
     - var dropdownClassName = "dropdown " + options.class; var dropdownWithId = options.id + "-dropdown"
-    div(class = dropdownClassName id = options.id)
+    div(class = dropdownClassName)
         b( class = "dropdown__title")= options.title
         .dropdown__body
             input(type = "checkbox" id = "dropdown__expanded")

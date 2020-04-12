@@ -1,15 +1,14 @@
 mixin checkbox-button(options)
     -
-        var checkboxButtonClassName = "checkbox-button"
-        // checkboxButtonClassName += options.isRich ? " checkbox-button_rich" : ""
+        var checkboxButtonClassName = "checkbox-button " + options.class
     label(class = checkboxButtonClassName)
-        input(class = checkboxButtonClassName + "__input" type = "checkbox")
+        input(class = "checkbox-button__input" type = "checkbox")
         .checkbox-button__mark
-            span(class = checkboxButtonClassName + "__checkmark")
+            span(class = "checkbox-button__checkmark")
         .checkbox-button__content
             if options.isRich
-                b(class = checkboxButtonClassName + "__label")= options.label
-                p(class = checkboxButtonClassName + "__text")= options.text
+                b(class = "checkbox-button__label")= options.label
+                p(class = "checkbox-button__text")= options.text
             else
-                p(class = checkboxButtonClassName + "__label_no-rich")= options.label
+                p(class = "checkbox-button__label_no-rich")= options.label
 

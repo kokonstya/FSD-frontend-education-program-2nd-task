@@ -1,12 +1,11 @@
 include ./../../components/checkbox-button/checkbox-button
 
 mixin checkbox-list(options)
-    - var checkboxListClassName = "checkbox-list"
-    .checkbox-list-wrapper
-        label(for = "checkbox-list__expanded")
+    - var checkboxListClassName = "checkbox-list " + options.class
+    div(class = checkboxListClassName)
+        label(for = "checkbox-list__expanded" class="checkbox-list__label")
             input(type = "checkbox" id = "checkbox-list__expanded")
-            div(class="checkbox-list__label" )
-                p= "expandable checkbox list"
+            p(class = "checkbox-list__title")= options.title
         .checkbox-list__list
             - for (var x = 0; x < options.items.length; x++)
                 +checkbox-button({label: options.items[x]})

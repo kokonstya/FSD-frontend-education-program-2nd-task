@@ -1,0 +1,21 @@
+mixin filter(options)
+    -
+        var filterClassName = "filter " + options.class
+    div(class = filterClassName)
+        +dropdown({class: "filter__dates", title: "Даты пребывания в отеле", selected: "2 кухни, 2 спальни..", items: ["Спальни", "Кухни", "Ванные комнаты"]})
+        +dropdown({class: "filter__guests", title: "Гости", selected: "2 кухни, 2 спальни..", items: ["Спальни", "Кухни", "Ванные комнаты"]})
+        +range-slider({class: "filter__price-range", title: "Диапазон цены", priceFrom: "5 000", priceTo: "10 000", footer: "Стоимость за сутки пребывания в номере"})
+        .filter__options-list= "Опции"
+            +checkbox-button({class: "filter__options-item", label: "Можно с питомцами"})
+            +checkbox-button({class: "filter__options-item", label: "Можно с питомцами"})
+            +checkbox-button({class: "filter__options-item", label: "Можно с питомцами"})
+        .filter__accessibility-list= "Доступность"
+            +checkbox-button({class: "filter__accessibility-item", isRich: true, label: "Широкий коридор", text: "Можно с питомцами"})
+            +checkbox-button({class: "filter__accessibility-item", isRich: true, label: "Широкий коридор", text: "Можно с питомцами"})
+        +dropdown({
+            class: "filter__comforts",
+            title: "Удобства номера",
+            selected: "2 кухни, 2 спальни..",
+            items: ["Спальни", "Кухни", "Ванные комнаты"]
+        })
+        +checkbox-list({class: "filter__extra-comforts", title: "Дополнительные удобства", items: ["Спальни", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты"]})

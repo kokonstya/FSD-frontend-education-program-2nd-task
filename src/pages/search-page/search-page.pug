@@ -11,15 +11,7 @@ mixin search-page(options)
         +header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
         .search-page
             .search-page__filter
-                +input({type: "text", placeholder: "Email", label: "Даты пребывания в отеле"})
-                +dropdown({title: "Dropdown", label: "2 кухни, 2 спальни..", items: ["Спальни", "Кухни", "Ванные комнаты"]})
-                +range-slider({})
-                +checkbox-button({label: "Можно с питомцами"})
-                +checkbox-button({label: "Можно с питомцами"})
-                +checkbox-button({label: "Можно с питомцами"})
-                +checkbox-button({isRich: true, label: "Широкий коридор", text: "Можно с питомцами"})
-                +checkbox-button({isRich: true, label: "Широкий коридор", text: "Можно с питомцами"})
-                +checkbox-list({items: ["Спальни", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты", "Кухни", "Ванные комнаты"]})
+
             .search-page__content
                 b(class = "search-page__title")= "123"
                 .search-page__list

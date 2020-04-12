@@ -15,6 +15,7 @@
 @import "./components/range-slider/range-slider.css";
 @import "./components/bullet-list/bullet-list.css";
 @import "./components/pagination/pagination.css";
+@import "./components/filter/filter.css";
 /*---------------------*/
 @import "./components/form-search/form-search.css";
 @import "./components/form-registration/form-registration.css";
@@ -35,7 +36,9 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: column
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1440px;
 }
 .hidden {
     display: none;
