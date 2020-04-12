@@ -1,8 +1,5 @@
-.dropdown-wrapper {
-    width: 266px;
-
-}
 .dropdown {
+    width: 320px;
     display: flex;
     flex-direction: column;
     font-style: normal;
@@ -10,9 +7,11 @@
     font-size: 12px;
     line-height: 15px;
     color: rgba(31, 32, 65, 0.75);
+}
+.dropdown__body {
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 2px;
-
+    position: relative;
 }
 .dropdown__title {
     font-size: 12px;
@@ -20,14 +19,15 @@
     color: #1F2041;
     text-transform: uppercase;
 }
-.dropdown__label {
+.dropdown__selected {
     position: relative;
     padding: 14px;
     font-weight: normal;
     min-height: 44px;
     cursor: pointer;
+
 }
-.dropdown__label:after {
+.dropdown__selected:after {
     content: '';
     transition: all .25s ease;
     position: absolute;
@@ -40,18 +40,27 @@
 #dropdown__expanded {
     display: none;
 }
-#dropdown__expanded:checked ~ .dropdown__label:after {
+#dropdown__expanded:checked ~ .dropdown__selected:after {
     transform: rotate(180deg);
 }
-#dropdown__expanded:checked ~ .dropdown__label {
+#dropdown__expanded:checked ~ .dropdown__selected {
     border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 
 }
 .dropdown__list {
+    width: 320px;
+    box-sizing: border-box;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-top: none;
     text-transform: uppercase;
     color: #1F2041;
     display: flex;
     flex-direction: column;
+    background: #FFFFFF;
+    z-index: 2;
+    margin-bottom: 5px;
+    position: absolute;
+    left: -1px;
 }
 .dropdown__item {
     cursor: pointer;
@@ -70,4 +79,24 @@
 }
 .dropdown__list.active {
     display: flex;
+}
+
+.dropdown__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 0.5);
+    font-weight: bold;
+}
+.dropdown__options_accept {
+    color: #BC9CFF;
+}
+.dropdown__options_accept, .dropdown__options_clear {
+    display: block;
+    cursor: pointer;
+    padding: 20px;
+}
+.dropdown__options_accept:hover, .dropdown__options_clear:hover {
+    background: rgba(31, 32, 65, 0.1);;
 }

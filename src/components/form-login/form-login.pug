@@ -2,14 +2,12 @@ include ./../../components/button/button
 include ./../../components/input/input
 
 mixin form-login(options)
-    - var formRegistrationClassName = "form-login"
-    .form-login-wrapper
-        .form-login
-            p( class = "form-login__title")= options.title
-            +input({type: "text", placeholder: "Email"})
-            +input({type: "text", placeholder: "Пароль"})
-            +btn({title: "Войти", isFilled:true, isSubmit: true})
-            .form-login__registration
-                p= "Нет аккаунта на Toxin?"
-                +btn({title: "Создать", isBordered: true})
+    .form-login
+        p(class = "form-login__title")= options.title
+        +input({class: "form-login__email", type: "text", placeholder: "Email"})
+        +input({class: "form-login__password", type: "text", placeholder: "Пароль"})
+        +button({class: "form-login__login-button", title: "Войти", isFilled:true, isSubmit: true})
+        .form-login__registration
+            p(class = "form-login__registration-title")= "Нет аккаунта на Toxin?"
+            +button({class: "form-login__registration-button", title: "Создать", isBordered: true})
 

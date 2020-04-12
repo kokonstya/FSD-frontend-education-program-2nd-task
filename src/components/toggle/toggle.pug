@@ -1,8 +1,8 @@
 mixin toggle(options)
     -
-        var toggleClassName = "toggle"
+        var toggleClassName = "toggle__container " + options.class
     label(class = toggleClassName)
-        input(type = "checkbox")
-        .toggle-container
-            span(class = "toggle-checkmark")
-        p= options.text
+        input(class = "toggle__input" type = "checkbox")
+        .toggle
+            span(class = "toggle__checkmark")
+        p(class = "toggle__title")= options.text

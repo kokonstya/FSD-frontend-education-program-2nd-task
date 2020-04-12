@@ -1,14 +1,14 @@
-.radio-button-wrapper {
+.radio-button__container {
     width: 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+
 }
-.radio-button {
+.radio-button__label {
     display: flex;
     flex-direction: row;
-    width: 100px;
     padding: 0;
     font-style: normal;
     font-weight: normal;
@@ -16,26 +16,27 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
-    /*border: 1px solid black;*/
+    margin-right: 25px;
 }
-.radio-button p {
+.radio-button__option {
     margin: 0;
     margin-left: 10px;
     margin-top: 1px;
+
 }
-.radio-button input {
+.radio-button__input {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
 }
-.radio-button:hover input ~ .radio-button-container .radio-button-checkmark {
+.radio-button__label:hover > .radio-button .radio-button__checkmark {
     border-color: #BC9CFF;
 }
-.radio-button input:checked ~ .radio-button-container .radio-button-checkmark {
+.radio-button__input:checked + .radio-button .radio-button__checkmark {
     border-color: #BC9CFF;
 }
-.radio-button-checkmark {
+.radio-button__checkmark {
     display: block;
     height: 20px;
     width: 20px;
@@ -44,7 +45,10 @@
     box-sizing: border-box;
     border-radius: 10px;
 }
-.radio-button-container .radio-button-checkmark:after {
+.radio-button__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
     left: 4px;
     top: 4px;
     width: 12px;
@@ -53,17 +57,11 @@
     border-radius: 10px;
 }
 
-.radio-button-checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.radio-button input:checked ~ .radio-button-container .radio-button-checkmark:after {
+.radio-button__input:checked + .radio-button .radio-button__checkmark:after {
     display: block;
 }
 
-.radio-button-container {
+.radio-button {
     display: block;
     height: 20px;
     width: 20px;

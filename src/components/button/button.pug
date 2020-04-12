@@ -1,10 +1,10 @@
-mixin btn(options)
+mixin button(options)
     -
         var buttonClassName = "button"
-        var buttonWrapperClassName = "button-wrapper"
-        buttonClassName += options.isFilled ? " button-filled" : ""
-        buttonClassName += options.isBordered ? " button-bordered" : ""
-        buttonClassName += options.isSubmit ? " button-submit" : ""
-        buttonWrapperClassName += options.isSubmit ? "-submit" : ""
+        var buttonWrapperClassName = "button-wrapper " + options.class
+        buttonClassName += options.isFilled ? " button_filled" : ""
+        buttonClassName += options.isBordered ? " button_bordered" : ""
+        buttonClassName += options.isSubmit ? " button_submit" : ""
+        buttonWrapperClassName += options.isSubmit ? " button_submit" : ""
     div(class = buttonWrapperClassName)
         button(class = buttonClassName)= options.title || "click me"

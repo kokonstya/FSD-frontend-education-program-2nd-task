@@ -1,4 +1,4 @@
-.toggle {
+.toggle__container {
     display: flex;
     flex-direction: row;
     width: 250px;
@@ -9,22 +9,22 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
-
+    cursor: pointer;
 }
-.toggle p {
+.toggle__title {
     margin: 0;
     margin-left: 10px;
 }
-.toggle input {
+.toggle__input {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
 }
-.toggle input:checked ~ .toggle-container .toggle-checkmark {
+.toggle__input:checked + .toggle .toggle__checkmark {
     border-color: #BC9CFF;
 }
-.toggle-checkmark {
+.toggle__checkmark {
     display: block;
     width: 40px;
     height: 20px;
@@ -32,11 +32,11 @@
     box-sizing: border-box;
     border-radius: 10px;
 }
-.toggle input:checked ~ .toggle-container .toggle-checkmark:after {
+.toggle__input:checked + .toggle .toggle__checkmark:after {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     left: 24px;
  }
-.toggle-container .toggle-checkmark:after {
+.toggle__checkmark:after {
     content: "";
     position: absolute;
     left: 4px;
@@ -48,11 +48,11 @@
     transition: left 0.3s ease-in;
 }
 
-.toggle input:checked ~ .toggle-container .toggle-checkmark:after {
+.toggle__input:checked ~ .toggle .toggle__checkmark:after {
     display: block;
 }
 
-.toggle-container {
+.toggle {
     display: block;
     width: 40px;
     height: 20px;

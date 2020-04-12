@@ -23,7 +23,7 @@
 .button:hover {
     color: rgba(31, 32, 65, 0.5);
 }
-.button-bordered {
+.button_bordered {
     height: 42px;
     background-clip: padding-box;
     border: 1px solid transparent;
@@ -32,7 +32,7 @@
     background-color: #FFFFFF;
 
 }
-.button-bordered:before {
+.button_bordered:before {
     box-sizing: content-box;
      content: '';
      position: absolute;
@@ -42,25 +42,26 @@
      border-radius: inherit;
      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
  }
-.button-bordered:hover {
+.button_bordered:hover {
     color: #BC9CFF;
     background-color: #FFFFFF;
 }
-.button-bordered:hover:before{
+.button_bordered:hover:before{
     opacity: 0.5;
 }
-.button-filled {
+.button_filled {
     color: #fff;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
-.button-filled:hover {
+.button_filled:hover {
     opacity: 0.5;
     color: #fff;
 }
-.button-submit {
+.button_submit {
     width: 320px;
+    position: relative;
 }
-.button-submit:after {
+.button_submit:after {
     content: '';
     position: absolute;
     background-image: url("./../../../arrow_forward-white.svg");

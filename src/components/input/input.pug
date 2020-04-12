@@ -1,9 +1,7 @@
 mixin input(options)
     -
-        var inputClassName = "input"
-        inputClassName += " input-" + options.type
-
-    div(class = "input-label")
-        if options.label
-            label(for = options.id, class = "label")= options.label
-        input(type = options.type, id = options.id, class = inputClassName, placeholder = options.placeholder)
+        var inputClassName = "input__container " + options.class
+    label(class = inputClassName)
+        if options.title
+            b(class = "input__title")= options.title
+        input(type = "text", class = "input", placeholder = options.placeholder)

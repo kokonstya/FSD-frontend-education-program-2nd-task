@@ -5,19 +5,21 @@ include ./../../components/dropdown/dropdown
 include ./../../components/toggle/toggle
 
 mixin form-registration(options)
-    - var formRegistrationClassName = "form-registration"
-    .form-registration-wrapper
-        .form-registration
-            p( class = "form-registration__title")= options.title
-            +input({type: "text", placeholder: "Имя"})
-            +input({type: "text", placeholder: "Фамилия"})
-            +radio-button({radioOptions: ["Мужчина", "Женщина"], name: "sex"})
-            +input({label: "Дата рождения", type: "text", placeholder: "ДД.ММ.ГГГГ"})
-            +input({label: "Данные для входа сервис", type: "text", placeholder: "Email"})
-            +input({type: "text", placeholder: "Пароль"})
-            +toggle({text: "Получать спецпредложения"})
-            +btn({title: "Перейти к оплате", isSubmit: true, isFilled: true})
-            .form-registration__login
-                p= "Уже есть аккаунт на Toxin"
-                +btn({title: "Войти", isBordered: true})
+    .form-registration
+        p(class = "form-registration__title")= options.title
+        +input({class: "form-registration__name", placeholder: "Имя"})
+        +input({class: "form-registration__second-name", placeholder: "Фамилия"})
+        +radio-button({class: "form-registration__gender", radioOptions: ["Мужчина", "Женщина"], name: "gender"})
+        div(class = "form-registration__birthday-field")
+            b(class = "form-registration__birthday-title")= "Дата рождения"
+            +input({class: "form-registration__birthday", placeholder: "ДД.ММ.ГГГГ"})
+        div(class = "form-registration__login-data")
+            b(class = "form-registration__login-data-title")= "Данные для входа в сервис"
+            +input({class: "form-registration__email", placeholder: "Email"})
+            +input({class: "form-registration__password", placeholder: "Пароль"})
+        +toggle({class: "form-registration__subscribe", text: "Получать спецпредложения"})
+        +button({class: "form-registration__pay", title: "Перейти к оплате", isSubmit: true, isFilled: true})
+        .form-registration__login
+            p(class = "form-registration__login-title")= "Уже есть аккаунт на Toxin"
+            +button({class: "form-registration__login-button", title: "Войти", isBordered: true})
 
