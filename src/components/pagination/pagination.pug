@@ -1,0 +1,18 @@
+mixin pagination(options)
+    - var paginationClassName = "pagination"; var paginationButtonClassName = "pagination__button"
+    .pagination
+        .pagination__body
+            if options.pagesCount > 5
+                - for (var x = 1; x < 4; x++)
+                        if options.currentPage == x
+                            - paginationButtonClassName += " pagination__button_active"
+                            div(class = paginationButtonClassName)= x
+                        else
+                            .pagination__button= x
+                .pagination__button= "..."
+                .pagination__button= options.pagesCount
+            .pagination__button.pagination__button_next
+                svg(xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24")
+                    path(fill="#FFFFFF" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z")
+                    path(d="M0 0h24v24H0z" fill="none")
+        .pagination__text= "1-12 из 100+ вариантов аренды"
