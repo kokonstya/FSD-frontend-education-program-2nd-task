@@ -1,6 +1,6 @@
 mixin pagination(options)
-    - var paginationClassName = "pagination"; var paginationButtonClassName = "pagination__button"
-    .pagination
+    - var paginationClassName = "pagination " + options.class; var paginationButtonClassName = "pagination__button"
+    div(class = paginationClassName)
         .pagination__body
             if options.pagesCount > 5
                 - for (var x = 1; x < 4; x++)

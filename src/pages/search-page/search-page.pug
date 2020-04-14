@@ -5,19 +5,23 @@ include ./../../components/input/input
 include ./../../components/checkbox-button/checkbox-button
 include ./../../components/dropdown/dropdown
 include ./../../components/range-slider/range-slider
+include ./../../components/filter/filter
+include ./../../components/pagination/pagination
+
 
 mixin search-page(options)
     .search-page-wrapper
         +header({isLogined: false, nav: ["Home", "About us", "Services", "Careers", "News", "Documentation"]})
         .search-page
             .search-page__filter
-
+                +filter({})
             .search-page__content
                 b(class = "search-page__title")= "123"
                 .search-page__list
                     - for (var x = 0; x < 10; x++)
                         .search-page__item
                             +card({imgSrc: "./../card_image_1.jpg", number: "111", isLux:true, price: "9 990", rate: "3", reviews: "65"})
+                +pagination({class: "search-page__pagination", pagesCount: "15", currentPage: "1"})
         +footer({nav: ["navigation", "About us", "News", "Support", "Products"],
             about: ["about us", "Who we are", "Our team", "Careers", "Investors"],
             support: ["support", "Documentation", "Community", "Get in touch"],

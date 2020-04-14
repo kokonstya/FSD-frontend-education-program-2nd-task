@@ -1,0 +1,120 @@
+.form-book-up {
+    width: 380px;
+    /*background: #FFFFFF;*/
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.form-book-up__title {
+    display: block;
+    color: #1F2041;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.form-book-up__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    align-items: center;
+
+}
+
+.form-book-up__number {
+    font-size: 17px;
+    line-height: 20px;
+    color: #1F2041;
+}
+.form-book-up__lux {
+    font-size: 12px;
+    line-height: 15px;
+    color: #BC9CFF;
+    text-transform: uppercase;
+    margin-left: 5px;
+
+}
+.form-book-up__price {
+    color: rgba(31, 32, 65, 0.5);
+}
+.form-book-up__price-span {
+    font-weight: normal;
+    margin-left: 5px;
+}
+.form-book-up__dates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-book-up__date_in {
+    width: 150px;
+}
+.form-book-up__date_out {
+    width: 150px;
+}
+.check {
+    width: 320px;
+}
+.check__number, .check__tax-discount, .check__tax {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.check__number_value, .check__tax-discount_value, .check__tax_value {
+    display: block;
+    width: 250px;
+}
+.check__tax-discount_value, .check__tax_value {
+    position: relative;
+
+}
+
+.check__tax-discount_value:after, .check__tax_value:after {
+    content: "i";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    justify-content: center;
+    color: rgba(31, 32, 65, 0.25);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+.form-book-up__sum-total {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041;
+    justify-content: space-between;
+    position: relative;
+}
+
+.form-book-up__sum-total:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 60px;
+    height: 100%;
+    width: 60%;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+
+}

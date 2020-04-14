@@ -23,13 +23,15 @@
     margin-bottom: 25px;
 }
 
-.form-search__guests .dropdown-wrapper {
+.form-search__guests {
     width: 320px;
 }
 
-/*ss*/
-.form-search__date-in {
-    width: 200px;
+.form-search__date_in {
+    width: 150px;
+}
+.form-search__date_out {
+    width: 150px;
 }
 .form-search__dates {
     display: flex;
@@ -37,6 +39,3 @@
     justify-content: space-between;
 }
 
-.form-search__dates .dropdown-wrapper {
-    width: 150px;
-}

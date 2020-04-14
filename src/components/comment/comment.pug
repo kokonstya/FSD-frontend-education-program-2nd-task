@@ -1,0 +1,12 @@
+include ./../../components/like-button/like-button
+
+
+mixin comment(options)
+    - var commentClassName = "comment " + options.class
+        .comment
+            .comment__user-info
+                .comment__user-icon
+                .comment__user-name
+                .comment__date
+            +like-button({class: "comment__like-button", isActive: true, count: "12"})
+            +like-button({class: "comment__like-button", count: "12"})

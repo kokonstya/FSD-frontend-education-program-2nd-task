@@ -1,0 +1,49 @@
+include ./../../components/button/button
+include ./../../components/input/input
+include ./../../components/dropdown/dropdown
+
+mixin form-book-up(options)
+    form(class = "form-book-up")
+        .form-book-up__info
+            b(class = "form-book-up__number")= "№ " + "999"
+                if options.isLux
+                span(class = "form-book-up__lux")= "ЛЮКС"
+            b(class = "form-book-up__price")= "9 999" + " P"
+                span(class = "form-book-up__price-span")= "в сутки"
+        .form-book-up__dates
+            +dropdown({
+                id: "dropdown_1",
+                class: "form-book-up__date_in",
+                title: "Прибытие",
+                selected: "Сколько гостей",
+                items: ["Взрослые", "Дети", "Младенцы"]
+            })
+            +dropdown({
+                id: "dropdown_2",
+                class: "form-book-up__date_out",
+                title: "Выезд",
+                selected: "Сколько гостей",
+                items: ["Взрослые1", "Дети1", "Младенцы1"]
+            })
+        +dropdown({
+            id: "dropdown_3",
+            class: "form-book-up__guests",
+            title: "Выезд",
+            selected: "3 гостя",
+            items: ["Взрослые1", "Дети1", "Младенцы1"]
+        })
+        .form-book-up__check.check
+            .check__number
+                .check__number_value= "9 990₽ х 4 суток"
+                .check__number_price= "39 960₽"
+            .check__tax-discount
+                .check__tax-discount_value= "Сбор за услуги: скидка 2 179₽"
+                .check__tax-discount_price= "0₽"
+            .check__tax
+                .check__tax_value= "Сбор за дополнительные услуги"
+                .check__tax_price= "330₽"
+        .form-book-up__sum-total
+            .form-book-up__sum-total_value= "Итого"
+            .form-book-up__sum-total_price= "10 330₽"
+        +button({class: "form-book-up__book-up-button", title: "Забронировать", isSubmit: true, isFilled: true})
+

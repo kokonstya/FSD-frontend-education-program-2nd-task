@@ -36,3 +36,6 @@
 .search-page__item {
     padding: 10px;
 }
+.search-page__pagination {
+    margin: 0 auto;
+}

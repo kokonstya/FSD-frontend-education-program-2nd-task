@@ -2,9 +2,28 @@ include ./../../components/button/button
 include ./../../components/dropdown/dropdown
 
 mixin form-search(options)
-    .form-search
+    form(class = "form-search")
         p( class = "form-search__title")= options.title
-        +dropdown({id: "dropdown_1", class: "form-search__date-in", title: "Прибытие", selected: "Сколько гостей", items: ["Взрослые", "Дети", "Младенцы"]})
-        +dropdown({id: "dropdown_2", class: "form-search__date-out", title: "Выезд", selected: "Сколько гостей", items: ["Взрослые1", "Дети1", "Младенцы1"]})
-        //+dropdown({id: "dropdown_3", class: "form-search__guests", title: "Гости", selected: "Сколько гостей", items: ["Взрослые2", "Дети2", "Младенцы2"]})
+        .form-search__dates
+            +dropdown({
+                id: "dropdown_1",
+                class: "form-search__date_in",
+                title: "Прибытие",
+                selected: "Сколько гостей",
+                items: ["Взрослые", "Дети", "Младенцы"]
+            })
+            +dropdown({
+                id: "dropdown_2",
+                class: "form-search__date_out",
+                title: "Выезд",
+                selected: "Сколько гостей",
+                items: ["Взрослые1", "Дети1", "Младенцы1"]
+            })
+        +dropdown({
+            id: "dropdown_3",
+            class: "form-search__guests",
+            title: "Выезд",
+            selected: "3 гостя",
+            items: ["Взрослые1", "Дети1", "Младенцы1"]
+        })
         +button({class: "form-search__search-button", title: "подобрать номера", isSubmit: true, isFilled: true})

@@ -1,11 +1,7 @@
-.card-wrapper {
+.card {
     border: 1px solid black;
     width: 270px;
     box-sizing: content-box;
-
-}
-
-.card {
     margin: 0 auto;
     display: flex;
     flex-direction: column;

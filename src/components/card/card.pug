@@ -1,7 +1,6 @@
 include ./../../components/rate-button/rate-button
 mixin card(options)
-    - var cardClassName = "card"; var rate = options.rate
-    .card-wrapper
+    - var cardClassName = "card " + options.class; var rate = options.rate
         .card
             .card__image
                 img(src = options.imgSrc)

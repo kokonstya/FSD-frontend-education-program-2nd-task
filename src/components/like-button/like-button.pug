@@ -1,7 +1,7 @@
 mixin like-button(options)
     -
-        var likeButtonClassName = "like-button"
+        var likeButtonClassName = "like-button " + options.class
         likeButtonClassName += options.isActive ? " like-button-active" : ""
         var likeButtonIcon = options.isActive ? "favorite" : "favorite_border"
     button(class = likeButtonClassName)= options.count
-        i(class="like-button-icon material-icons")=likeButtonIcon
+        i(class="like-button__icon material-icons")=likeButtonIcon

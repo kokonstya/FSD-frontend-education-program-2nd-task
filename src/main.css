@@ -16,10 +16,12 @@
 @import "./components/bullet-list/bullet-list.css";
 @import "./components/pagination/pagination.css";
 @import "./components/filter/filter.css";
+@import "./components/comment/comment.css";
 /*---------------------*/
 @import "./components/form-search/form-search.css";
 @import "./components/form-registration/form-registration.css";
 @import "./components/form-login/form-login.css";
+@import "./components/form-book-up/form-book-up.css";
 /*---------------*/
 @import "./pages/landing-page/landing-page.css";
 @import "./pages/search-page/search-page.css";

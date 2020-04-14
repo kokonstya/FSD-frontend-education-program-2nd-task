@@ -2,7 +2,7 @@ include ./../../components/button/button
 include ./../../components/input/input
 
 mixin form-login(options)
-    .form-login
+    form(class = "form-login")
         p(class = "form-login__title")= options.title
         +input({class: "form-login__email", type: "text", placeholder: "Email"})
         +input({class: "form-login__password", type: "text", placeholder: "Пароль"})

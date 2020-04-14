@@ -5,7 +5,7 @@ include ./../../components/dropdown/dropdown
 include ./../../components/toggle/toggle
 
 mixin form-registration(options)
-    .form-registration
+    form(class = "form-registration")
         p(class = "form-registration__title")= options.title
         +input({class: "form-registration__name", placeholder: "Имя"})
         +input({class: "form-registration__second-name", placeholder: "Фамилия"})
